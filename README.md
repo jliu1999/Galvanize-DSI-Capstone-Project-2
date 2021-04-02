@@ -25,7 +25,7 @@ The images are split into training, validate, and test datasets (60% : 20% : 20%
 
 ### **Sample Images for Each Class**
 
-Sample images for Class 1 Cancerous {style=text-align:center}
+<p align="center">Sample images for Class 1 Cancerous</p>
 
 ![](images/class1.jpg)
 
