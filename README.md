@@ -72,7 +72,7 @@ The ratio of Class 0 to Class 1 is about 2:1, it is an unbalanced dataset. Howev
 
 ### **Fine-Tuning the Model**
 
-Scores and Metrics | Base | softmax | sgd | Batch Normalization | L2 Regularization | lr 0.01 | lr 0.0005 | lr 0.0001
+Scores and Metrics | Base | Softmax | SGD | Batch Normalization | L2 Regularization | lr 0.01 | lr 0.0005 | lr 0.0001
 ------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
 Loss | 0.320 | 10.60 | 0.312 | 0.379 | 0.391 | 0.605 | 0.326 | 0.327
 Accuracy | 0.863 | 0.305 | 0.868 | 0.856 | 0.846 | 0.707 | 0.858 | 0.858
