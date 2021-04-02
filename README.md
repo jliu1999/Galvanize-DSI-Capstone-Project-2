@@ -25,15 +25,13 @@ The images are split into training, validate, and test datasets (60% : 20% : 20%
 
 ### **Sample Images for Each Class**
 
-Sample images for Class 1 Cancerous
-
+<center>**Sample images for Class 1 Cancerous**</center>
 ![](images/class1.jpg)
 
-Sample images for Class 0 Non-Cancerous
+<center>**Sample images for Class 0 Non-Cancerous**</center>
 ![](images/class0.jpg)
 
 ### **Class Balance**
-
 ![](images/class.jpg)
 
 The ratio of Class 0 to Class 1 is about 2:1, it is an unbalanced dataset. However, since I have huge amount of images, it's unlikely that any of the two  classes will be under represented in any of the train, validation, and test datasets. So I will still use accuracy as the measurement metric, along with some other metrics. 
@@ -109,7 +107,7 @@ A Convolutional Neural Network model is built to classify patient breast tissue 
 
 ## Future Plans
 
-* Try to fine-tune learning rate for SGD optimizer
+* Try to fine-tune learning rate for SGD optimizer, and try out more epochs as I even didn't reach 100 epochs due to technical problems.
 * Try out Hyperas module to sysmatically fine-tune the hyperparameters of the models. I tried it for this project, but didn't get it work.
 * Try out AlexNet, ResNet, VGGNet, and Inceptionet to have an idea how these neural networks differ from each other and CNN.
 
