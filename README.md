@@ -84,7 +84,7 @@ Recall | 0.648 | 1.0 | 0.746 | 0.712 | 0.722 | 0 | 0.808 | 0.726 |
 
 ### **Final Model**
 
-**Changes made comparing to base model:**
+**Changes made to the base model:**
 
 * SGD instead of Adam as optimizer
 * Three more CNN layers
