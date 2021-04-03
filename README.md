@@ -8,12 +8,12 @@ Breast cancer is a serious global health problem. Early detection is one of the 
 
 The dataset consist of 277,524 images from 279 patients who were diagnosed with breast cancer. I selected images from 100 patients which reduce the image numbers to about 100,000. 
 
-**Data Source: [link](https://www.kaggle.com/paultimothymooney/breast-histopathology-images)**
+**Data Source: [https://www.kaggle.com/paultimothymooney/breast-histopathology-images](https://www.kaggle.com/paultimothymooney/breast-histopathology-images)**
 <br>
 
 ## **Objective**
 
-Build an Convolutional Neural Network model to classify if an image showing cancerous symptoms or not, which will in turn assist in determing the cancer grade stage.
+Build an Convolutional Neural Network model to classify if an image shows cancerous symptoms or not, which will in turn assist in determing the cancer stage.
 
 ## **EDA**
 
@@ -21,15 +21,15 @@ Build an Convolutional Neural Network model to classify if an image showing canc
 
 ![](images/DataStructure.jpg)
 
-The images are split into training, validate, and test datasets (60% : 20% : 20%). Each folder contains two sub-folders corresponding to cancerous( class 1 ) and non-cancerous (class 0).
+The images are split into train, validation, and test datasets (60% : 20% : 20%). Each folder contains two sub-folders corresponding to cancerou (class 1) and non-cancerous (class 0).
 
 ### **Sample Images for Each Class**
 
-<p align="center">Sample images for Class 1 Cancerous</p>
+**<p align="center">Sample images for Class 1 Cancerous</p>**
 
 ![](images/class1.jpg)
 
-<p align="center">Sample images for Class 0 Non-Cancerous</p>
+**<p align="center">Sample images for Class 0 Non-Cancerous</p>**
 
 ![](images/class0.jpg)
 
@@ -57,7 +57,7 @@ The ratio of Class 0 to Class 1 is about 2:1, it is an unbalanced dataset. Howev
 * Activation function: relu for speed, sigmoid for last output layer
 * Optimizer: adam
 * Loss function: binary_crossentropy
-* Metrics=accuracy, AUC, Precision, Recall
+* Metrics: accuracy, AUC, Precision, Recall
 * Parameters: 94,305
 * Epochs: 50
 * Result: 
