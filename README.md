@@ -74,13 +74,13 @@ The ratio of Class 0 to Class 1 is about 2:1, it is an unbalanced dataset. Howev
 
 Scores and Metrics | Base | Softmax | SGD | Batch Normalization | L2 Regularization | lr 0.01 | lr 0.0005 | lr 0.0001
 ------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
-Loss | 0.320 | 10.60 | 0.312 | 0.379 | 0.391 | 0.410 | 0.326 | 0.327
-Accuracy | 0.863 | 0.305 | 0.868 | 0.856 | 0.846 | 0.826 | 0.858 | 0.858
-AUC | 0.933 | 0.5 | 0.927 | 0.908 | 0.898 | 0.869 | 0.929 | 0.923
-Precision | 0.872 | 0.305 | 0.806 | 0.795 | 0.760 | 0.742 | 0.757 | 0.804 | 
-Recall | 0.648 | 1.0 | 0.746 | 0.712 | 0.722 | 0.660 | 0.808 | 0.726 |
+Loss | 0.320 | 10.60 | 0.312 | 0.379 | 0.391 | 0.410 | 0.297 | 0.327
+Accuracy | 0.863 | 0.305 | 0.868 | 0.856 | 0.846 | 0.826 | 0.874 | 0.858
+AUC | 0.933 | 0.5 | 0.927 | 0.908 | 0.898 | 0.869 | 0.934 | 0.923
+Precision | 0.872 | 0.305 | 0.806 | 0.795 | 0.760 | 0.742 | 0.823 | 0.804 | 
+Recall | 0.648 | 1.0 | 0.746 | 0.712 | 0.722 | 0.660 | 0.747 | 0.726 |
 
-**SGD optimizer gave a slightly better scores.
+**SGD optimizer and learning rate 0.0005 gave a slightly better scores.
 
 ![](images/sgd.jpg)
 
@@ -91,6 +91,8 @@ Recall | 0.648 | 1.0 | 0.746 | 0.712 | 0.722 | 0.660 | 0.808 | 0.726 |
 * SGD instead of Adam as optimizer
 * Three more CNN layers
 * Parameters: 202,945
+* More epochs: 100
+(Please note: Didn't choose learning rate 0.0005 because it is for Adam optimizer, should try different learning rate for SGD in the future.)
 
 Metrics | Base Model | Final Model | HoldOut
 ------------ | ------------- | ------------- | -------------
@@ -115,8 +117,8 @@ A Convolutional Neural Network model is built to classify patient breast tissue 
 
 ## Future Plans
 
-* Try to fine-tune learning rate for SGD optimizer, and try out more epochs as I even didn't reach 100 epochs due to technical problems.
-* Try out Hyperas module to sysmatically fine-tune the hyperparameters of the models. I tried it for this project, but didn't get it work.
-* Try out AlexNet, ResNet, VGGNet, and Inceptionet to have an idea how these neural networks differ from each other and CNN.
+* Try to fine-tune learning rate for SGD optimizer.
+* With the help of Tensorboard, try to sysmatically fine-tune more hyperparameters.
+* Try out AlexNet, ResNet, VGGNet, Inceptionet, etc., to have an idea how these neural networks differ from each other and CNN.
 
 (Please see jupyter notebooks for codes and details)
