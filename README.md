@@ -80,7 +80,7 @@ AUC | 0.933 | 0.5 | 0.927 | 0.908 | 0.898 | 0.869 | 0.934 | 0.923
 Precision | 0.872 | 0.305 | 0.806 | 0.795 | 0.760 | 0.742 | 0.823 | 0.804 | 
 Recall | 0.648 | 1.0 | 0.746 | 0.712 | 0.722 | 0.660 | 0.747 | 0.726 |
 
-**SGD optimizer and learning rate 0.0005 gave a slightly better scores.
+**SGD optimizer and learning rate 0.0005 gave a slightly better scores.**
 
 ![](images/sgd.jpg)
 
@@ -107,15 +107,15 @@ F1_score  | 0.834 | 0.871 | 0.876
 ![](images/final_cf_matrix.jpg)
 ![](images/roc.jpg)
 
-### Discussion
+### **Discussion**
 
 To identify if a patch image is cancerous, we definitely want to have a high TPR. Mean while, we care about FNR. We don't want identify positive patches as negative, because that might falsely lead to a decision that the cancer is at an early stage. The consequence is serious, in worst case will cost life. We also care about FPR. A high FPR will probably lead to mistake an early stage cancer for late stage. Not only this will increase the patient's mental problem, but also the patient may need to go through unnecessary harsher treatment with more side-effects, which will in turn damage patient's health even more. So we need to find a balance between TPR, FNR, and FPR. ROC curve is good for making such decision, it helps to choose TPR, FPR based on your prospective. 
 
-## Summary
+## **Summary**
 
 A Convolutional Neural Network model is built to classify patient breast tissue scan images as either cancerous or non-cancerous. Hyperparameters are fine-tuned to improve the model. The final model achieves an accuracy of 0.886 for holdout dataset.
 
-## Future Plans
+## **Future Plans**
 
 * Try to fine-tune learning rate for SGD optimizer.
 * With the help of Tensorboard, try to sysmatically fine-tune more hyperparameters.
