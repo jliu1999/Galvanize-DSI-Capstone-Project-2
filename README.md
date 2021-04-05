@@ -80,6 +80,8 @@ AUC | 0.933 | 0.5 | 0.927 | 0.908 | 0.898 | 0.869 | 0.929 | 0.923
 Precision | 0.872 | 0.305 | 0.806 | 0.795 | 0.760 | 0.742 | 0.757 | 0.804 | 
 Recall | 0.648 | 1.0 | 0.746 | 0.712 | 0.722 | 0.660 | 0.808 | 0.726 |
 
+**SGD optimizer gave a slightly better scores.
+
 ![](images/sgd.jpg)
 
 ### **Final Model**
@@ -102,6 +104,10 @@ F1_score  | 0.834 | 0.871 | 0.876
 ![](images/more.jpg)
 ![](images/final_cf_matrix.jpg)
 ![](images/roc.jpg)
+
+### Discussion
+
+To identify if a patch image is cancerous, we definitely want to have a high TPR. Mean while, we care about FNR. We don't want identify positive patches as negative, because that might falsely lead to a decision that the cancer is at an early stage. The consequence is serious, in worst case will cost life. We also care about FPR. A high FPR will probably lead to mistake an early stage cancer for late stage. Not only this will increase the patient's mental problem, but also the patient may need to go through unnecessary harsher treatment with more side-effects, which will in turn damage patient's health even more. So we need to find a balance between TPR, FNR, and FPR. ROC curve is good for making such decision, it helps to choose TPR, FPR based on your prospective. 
 
 ## Summary
 
