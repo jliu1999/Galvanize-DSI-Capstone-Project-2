@@ -92,6 +92,7 @@ Recall | 0.648 | 1.0 | 0.746 | 0.712 | 0.722 | 0.660 | 0.747 | 0.808
 * Three more CNN layers
 * Parameters: 202,945
 * More epochs: 100
+
 (Please note: Didn't choose learning rate 0.0005 because it is for Adam optimizer, should try different learning rate for SGD in the future.)
 
 Metrics | Base Model | Final Model | HoldOut
