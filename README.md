@@ -4,7 +4,7 @@
 
 ## **Background**
 
-Breast cancer is a serious global health problem. Early detection is one of the key determinants for treatment and survival. For people diagnosed with breast cancer, evaluating the aggressiveness grade is critical. It is used to help predict your outcome and to help figure out what treatments might work best. Breast histopathology imaging is one of the techniques used for this purpose. Basically it is to collect tissue samples from the patient and scan 40x enlarged images for every patch of the sample using some kind of special microscope. Some patches are cancerous, some are not. The aggressiveness grade will be largely dependent on the number, size, and location of these cancerous patches. 
+Breast cancer is a serious global health problem. Early detection is one of the key determinants for treatment and survival rate. For people diagnosed with breast cancer, evaluating the aggressiveness grade is critical. It is used to help figure out what treatments might work best and predict the treatment outcome. Breast histopathology imaging is one of the techniques used for this purpose. Basically it is to collect tissue samples from the patient and scan 40x enlarged images for every patch of the sample using some kind of special microscope. Some patches are cancerous, some are not. The aggressiveness grade will be largely dependent on the number, size, and location of these cancerous patches. 
 
 The dataset consist of 277,524 images from 279 patients who were diagnosed with breast cancer. I selected images from 100 patients which reduce the image numbers to about 100,000. 
 
@@ -13,7 +13,7 @@ The dataset consist of 277,524 images from 279 patients who were diagnosed with 
 
 ## **Objective**
 
-Build an Convolutional Neural Network model to classify if an image shows cancerous symptoms or not, which will in turn assist in determing the cancer stage.
+Build a Convolutional Neural Network model to classify if an image shows cancerous symptoms or not, which will in turn assist in determing the cancer stage.
 
 ## **EDA**
 
@@ -36,7 +36,7 @@ The images are split into train, validation, and test datasets (60% : 20% : 20%)
 ### **Class Balance**
 ![](images/class.jpg)
 
-The ratio of Class 0 to Class 1 is about 2:1, it is an unbalanced dataset. However, since I have huge amount of images, it's unlikely that any of the two  classes will be under represented in any of the train, validation, and test datasets. So I will still use accuracy as the measurement metric, along with some other metrics. 
+The ratio of Class 0 to Class 1 is about 2:1, it is an unbalanced dataset. However, since I have huge amount of images, it's unlikely that any of the two classes will be under represented in any of the train, validation, and test datasets. So I will still use accuracy as the measurement metric, along with some other metrics. 
 
 ## **CNN Model**
 
@@ -110,11 +110,11 @@ F1_score  | 0.834 | 0.871 | 0.876
 
 ### **Discussion**
 
-To identify if a patch image is cancerous, we definitely want to have a high TPR. Mean while, we care about FNR. We don't want identify positive patches as negative, because that might falsely lead to a decision that the cancer is at an early stage. The consequence is serious, in worst case will cost life. We also care about FPR. A high FPR will probably lead to mistake an early stage cancer for late stage. Not only this will increase the patient's mental problem, but also the patient may need to go through unnecessary harsher treatment with more side-effects, which will in turn damage patient's health even more. So we need to find a balance between TPR, FNR, and FPR. ROC curve is good for making such decision, it helps to choose TPR, FPR based on your prospective. 
+To identify if a patch image is cancerous, we definitely want to have a high TPR. Mean while, we care about FNR. We don't want identify positive patches as negative, because that might falsely lead to a decision that the cancer is at an early stage. The consequence is serious, in worst case it will cost life. We also care about FPR. A high FPR will probably lead to mistake an early stage cancer for late stage. Not only this will possibly cause mental problem for the patient, but also the patient may need to go through unnecessary harsher treatment with more side-effects, which will in turn damage the patient's health even more. So we need to find a balance between TPR, FNR, and FPR. ROC curve is good for making such decision, it helps to choose TPR, FPR based on your prospective. 
 
 ## **Summary**
 
-A Convolutional Neural Network model is built to classify patient breast tissue scan images as either cancerous or non-cancerous. Hyperparameters are fine-tuned to improve the model. The final model achieves an accuracy of 0.886 for holdout dataset.
+A Convolutional Neural Network model is built to classify patient breast tissue scan images as either cancerous or non-cancerous. Hyperparameters are fine-tuned to improve the model. The final model achieves an accuracy of 0.895 for holdout dataset.
 
 ## **Future Plans**
 
