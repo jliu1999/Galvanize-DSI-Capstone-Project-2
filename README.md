@@ -13,7 +13,7 @@ The dataset consist of 277,524 images from 279 patients who were diagnosed with 
 
 ## **Objective**
 
-Build a Convolutional Neural Network model to classify if an image shows cancerous symptoms or not, which will in turn assist in determing the cancer stage.
+Build a Convolutional Neural Network model to classify if an image shows cancerous symptoms or not, which will in turn assist in determining the cancer stage.
 
 ## **EDA**
 
