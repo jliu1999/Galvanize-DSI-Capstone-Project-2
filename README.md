@@ -1,4 +1,4 @@
-# **Breast Histopathology Images Prediction**
+# **Breast Histopathology Images Classification**
 
 ![](images/bc.jpg)
 
