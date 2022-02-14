@@ -110,7 +110,7 @@ F1_score  | 0.834 | 0.871 | 0.876
 
 ### **Discussion**
 
-To identify if a patch image is cancerous, we definitely want to have a high recall, i.e. high TPR and low FNR (TPR+FNR=1). We don't want identify positive patches as negative, because that might falsely lead to a decision that the cancer is at an early stage. The consequence is serious, in worst case it will cost life. Meanwhile, we also care about FPR. A high FPR (thus a low precision) will probably lead to mistake an early stage cancer for late stage. Not only this will possibly cause mental problem for the patient, but also the patient may need to go through unnecessary harsher treatment with more side-effects, which will in turn damage the patient's health even more. So we need to find a balance between TPR and FPR. ROC curve is good for making such decision, it helps to choose TPR, FPR based on your prospective. 
+To identify if a patch image is cancerous, we definitely want to have a high recall, i.e. high TPR and low FNR (TPR+FNR=1). We don't want identify positive patches as negative, because that might falsely lead to a decision that the cancer is at an early stage. The consequence is serious, in worst case it will cost life. Meanwhile, we also care about FPR. A high FPR (thus a low specificity) will probably lead to mistake an early stage cancer for late stage. Not only this will possibly cause mental problem for the patient, but also the patient may need to go through unnecessary harsher treatment with more side-effects, which will in turn damage the patient's health even more. So we need to find a balance between TPR and FPR. ROC curve is good for making such decision, it helps to choose TPR, FPR based on your prospective. 
 
 ## **Summary**
 
